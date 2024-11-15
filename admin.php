@@ -30,6 +30,7 @@ if (isset($_POST['add_admin'])) {
     <meta charset="UTF-8">
     <title>Admin</title>
     <link rel="stylesheet" href="style.css">
+    <link href="library_logo.jpeg" rel="icon" />
 </head>
 
 <body>

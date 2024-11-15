@@ -41,6 +41,7 @@ if (isset($_POST['add_magazine'])) {
     <meta charset="UTF-8">
     <title>Magazines</title>
     <link rel="stylesheet" href="style.css">
+    <link href="library_logo.jpeg" rel="icon" />
 </head>
 
 <body>

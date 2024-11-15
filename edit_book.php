@@ -42,6 +42,7 @@ if (isset($_POST['update_book'])) {
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link href="library_logo.jpeg" rel="icon" />
     <title>Edit Book</title>
 </head>
 

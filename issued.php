@@ -82,6 +82,7 @@ if (isset($_POST['return_book'])) {
     <meta charset="UTF-8">
     <title>Issued Books</title>
     <link rel="stylesheet" href="style.css">
+    <link href="library_logo.jpeg" rel="icon" />
 </head>
 
 <body>

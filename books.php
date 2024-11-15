@@ -37,6 +37,7 @@ if (isset($_GET['delete'])) {
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link href="library_logo.jpeg" rel="icon" />
     <title>Books</title>
 </head>
 

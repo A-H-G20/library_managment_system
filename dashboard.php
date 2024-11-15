@@ -42,6 +42,7 @@ $date_today = date("m/d/Y");
     <title>Library Management Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="library_logo.jpeg" rel="icon" />
     <style>
         /* Custom styles */
         body {
