@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 // Fetch counts from different tables
 $books_count = $conn->query("SELECT COUNT(*) AS count FROM books")->fetch_assoc()['count'] ?? 0;
 $members_count = $conn->query("SELECT COUNT(*) AS count FROM members")->fetch_assoc()['count'] ?? 0;
-
+$admin_count = $conn->query("SELECT COUNT(*) AS count FROM admin")->fetch_assoc()['count'] ?? 0;
 $magazines_count = $conn->query("SELECT COUNT(*) AS count FROM magazines")->fetch_assoc()['count'] ?? 0;
 $issued_count = $conn->query("SELECT COUNT(*) AS count FROM issued_books")->fetch_assoc()['count'] ?? 0;
 $returned_count = $conn->query("SELECT COUNT(*) AS count FROM issued_books WHERE returned = 1")->fetch_assoc()['count'] ?? 0;
@@ -136,8 +136,9 @@ $date_today = date("m/d/Y");
             <div class="col-md-3">
                 <a href="books.php" class="card-link">
                     <div class="card card-blue">
+                    <p>Books</p>
                         <h3><?php echo $books_count; ?></h3>
-                        <p>Books</p>
+                        
                     </div>
                 </a>
             </div>
@@ -145,26 +146,30 @@ $date_today = date("m/d/Y");
             <div class="col-md-3">
                 <a href="members.php" class="card-link">
                     <div class="card card-green">
+                    <p>Members</p>
                         <h3><?php echo $members_count; ?></h3>
-                        <p>Members</p>
+                        
 
                     </div>
                 </a>
             </div>
+            
             <div class="col-md-3">
                 <a href="issued.php" class="card-link">
                     <div class="card card-orange">
-                        <h3><?php echo $issued_count;; ?></h3>
-                        <p>Issued</p>
+                    <p>Issued</p>
 
+                        <h3><?php echo $issued_count;; ?></h3>
+                        
                     </div>
                 </a>
             </div>
             <div class="col-md-3">
                 <a href="magazines.php" class="card-link">
                     <div class="card card-red">
+                    <p>Magazines</p>
                         <h3><?php echo $magazines_count; ?></h3>
-                        <p>Magazines</p>
+                        
                        
                     </div>
                 </a>
@@ -172,19 +177,29 @@ $date_today = date("m/d/Y");
 
 
             <div class="col-md-3 mt-4">
-                <div class="card card-red">
+                <div class="card card-blue">
                     <h3>Returned</h3>
                     <p><?php echo $returned_count; ?></p>
                 </div>
             </div>
             <div class="col-md-3 mt-4">
-                <div class="card card-green">
+                <a href="admin.php" class="card-link">
+                    <div class="card card-green">
+                    <p>Admin</p>
+                        <h3><?php echo $admin_count; ?></h3>
+                        
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 mt-4">
+                <div class="card card-orange">
                     <h3>Not Returned</h3>
                     <p><?php echo $not_returned_count; ?></p>
                 </div>
             </div>
             <div class="col-md-3 mt-4">
-                <div class="card card-orange">
+                <div class="card card-red">
                     <h3>Date Today</h3>
                     <p><?php echo $date_today; ?></p>
                 </div>
