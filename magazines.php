@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     // If not logged in, redirect to login page
     header("Location: login.php");
     exit;
-}?>
+} ?>
 <?php
 include 'config.php';
 
@@ -36,11 +36,13 @@ if (isset($_POST['add_magazine'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Magazines</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <?php include 'sidebar.php'; ?>
     <div class="content p-4">
@@ -80,48 +82,51 @@ if (isset($_POST['add_magazine'])) {
         </form>
     </div>
 </body>
+
 </html>
 <style>
     /* Alert Styles */
-.alert {
-    padding: 15px;
-    margin-top: 20px;
-    background-color: #f44336;
-    color: white;
-    border-radius: 4px;
-}
+    .alert {
+        padding: 15px;
+        margin-top: 20px;
+        background-color: #f44336;
+        color: white;
+        border-radius: 4px;
+    }
 
-.alert.success {
-    background-color: #4CAF50;
-}
+    .alert.success {
+        background-color: #4CAF50;
+    }
 
-.alert.error {
-    background-color: #f44336;
-}
+    .alert.error {
+        background-color: #f44336;
+    }
 
-/* Form Styles (Existing) */
-form input, form button {
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-}
+    /* Form Styles (Existing) */
+    form input,
+    form button {
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
 
-form input[type="text"], form input[type="number"], form input[type="date"] {
-    width: 100%;
-    border: 1px solid #ccc;
-}
+    form input[type="text"],
+    form input[type="number"],
+    form input[type="date"] {
+        width: 100%;
+        border: 1px solid #ccc;
+    }
 
-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-}
+    form button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        width: 100%;
+    }
 
-form button:hover {
-    background-color: #0056b3;
-}
-
+    form button:hover {
+        background-color: #0056b3;
+    }
 </style>

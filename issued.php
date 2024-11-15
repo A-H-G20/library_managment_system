@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     // If not logged in, redirect to login page
     header("Location: login.php");
     exit;
-}?>
+} ?>
 <?php
 include 'config.php';
 
@@ -77,13 +77,15 @@ if (isset($_POST['return_book'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Issued Books</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<?php include 'sidebar.php'; ?>
+    <?php include 'sidebar.php'; ?>
     <div class="content p-4">
         <h2>Issued Books</h2>
         <table class="table">
@@ -153,149 +155,150 @@ if (isset($_POST['return_book'])) {
         </form>
     </div>
 </body>
+
 </html>
 
 <style>
     /* General Body Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-}
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+    }
 
 
 
 
-/* Content Styles */
-.content {
-    margin-left: 260px;
-    padding: 20px;
-}
+    /* Content Styles */
+    .content {
+        margin-left: 260px;
+        padding: 20px;
+    }
 
-.content h2 {
-    color: #343a40;
-    margin-bottom: 20px;
-}
+    .content h2 {
+        color: #343a40;
+        margin-bottom: 20px;
+    }
 
-.content h3 {
-    margin-top: 40px;
-    color: #495057;
-}
+    .content h3 {
+        margin-top: 40px;
+        color: #495057;
+    }
 
-/* Table Styles */
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    margin-top: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    /* Table Styles */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        margin-top: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-.table th, .table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
+    .table th,
+    .table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
 
-.table th {
-    background-color: #007bff;
-    color: white;
-}
+    .table th {
+        background-color: #007bff;
+        color: white;
+    }
 
-.table td {
-    background-color: #f9f9f9;
-}
+    .table td {
+        background-color: #f9f9f9;
+    }
 
-.table tr:nth-child(even) td {
-    background-color: #f2f2f2;
-}
+    .table tr:nth-child(even) td {
+        background-color: #f2f2f2;
+    }
 
-.table td:hover {
-    background-color: #f1f1f1;
-}
+    .table td:hover {
+        background-color: #f1f1f1;
+    }
 
-.table td:last-child {
-    text-align: center;
-}
+    .table td:last-child {
+        text-align: center;
+    }
 
-/* Form Styles */
-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
+    /* Form Styles */
+    form {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
 
-.form-group {
-    margin-bottom: 15px;
-}
+    .form-group {
+        margin-bottom: 15px;
+    }
 
-label {
-    font-size: 16px;
-    color: #343a40;
-}
+    label {
+        font-size: 16px;
+        color: #343a40;
+    }
 
-select {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 5px;
-    background-color: #fafafa;
-}
+    select {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 5px;
+        background-color: #fafafa;
+    }
 
-select:focus {
-    border-color: #007bff;
-    outline: none;
-}
+    select:focus {
+        border-color: #007bff;
+        outline: none;
+    }
 
-button {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 20px;
-}
+    button {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+    }
 
-button:hover {
-    background-color: #0056b3;
-}
+    button:hover {
+        background-color: #0056b3;
+    }
 
-/* Alert Messages */
-.alert {
-    padding: 15px;
-    margin-top: 20px;
-    background-color: #f44336;
-    color: white;
-    border-radius: 4px;
-}
+    /* Alert Messages */
+    .alert {
+        padding: 15px;
+        margin-top: 20px;
+        background-color: #f44336;
+        color: white;
+        border-radius: 4px;
+    }
 
-.alert.success {
-    background-color: #4CAF50;
-}
+    .alert.success {
+        background-color: #4CAF50;
+    }
 
-.alert.error {
-    background-color: #f44336;
-}
+    .alert.error {
+        background-color: #f44336;
+    }
 
-/* Footer Styles */
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
+    /* Footer Styles */
+    footer {
+        background-color: #343a40;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
 </style>

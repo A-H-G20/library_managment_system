@@ -1,50 +1,55 @@
 <style>
-       /* Sidebar styles */
-   .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 220px;
-            height: 100%;
-            background-color: #2c3e50;
-            color: #fff;
-            padding-top: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        }
-        .sidebar .header {
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 30px;
-            color: #ecf0f1;
-        }
-        .sidebar .sidebar-profile {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .sidebar .sidebar-profile img {
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-        }
-        .sidebar .sidebar-profile p {
-            color: #ecf0f1;
-            margin-top: 10px;
-        }
-        .sidebar .sidebar-links a {
-            display: block;
-            padding: 10px;
-            color: #ecf0f1;
-            text-decoration: none;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        .sidebar .sidebar-links a:hover,
-        .sidebar .sidebar-links a.active {
-            background-color: #34495e;
-            border-radius: 5px;
-        }
-        
+    /* Sidebar styles */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 100%;
+        background-color: #2c3e50;
+        color: #fff;
+        padding-top: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar .header {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 30px;
+        color: #ecf0f1;
+    }
+
+    .sidebar .sidebar-profile {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .sidebar .sidebar-profile img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+
+    .sidebar .sidebar-profile p {
+        color: #ecf0f1;
+        margin-top: 10px;
+    }
+
+    .sidebar .sidebar-links a {
+        display: block;
+        padding: 10px;
+        color: #ecf0f1;
+        text-decoration: none;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .sidebar .sidebar-links a:hover,
+    .sidebar .sidebar-links a.active {
+        background-color: #34495e;
+        border-radius: 5px;
+    }
 </style>
 
 <div class="sidebar">

@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     // If not logged in, redirect to login page
     header("Location: login.php");
     exit;
-}?>
+} ?>
 <?php
 include 'config.php';
 
@@ -41,7 +41,7 @@ if (isset($_GET['delete'])) {
 </head>
 
 <body>
-<?php include 'sidebar.php'; ?>
+    <?php include 'sidebar.php'; ?>
 
     <div class="content p-4">
         <div class="dashboard-header">
