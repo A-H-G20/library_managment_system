@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     // If not logged in, redirect to login page
     header("Location: login.php");
     exit;
-}?>
+} ?>
 <?php
 // Connect to the database
 $host = 'localhost';
@@ -35,6 +35,7 @@ $date_today = date("m/d/Y");
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,8 +50,8 @@ $date_today = date("m/d/Y");
             margin: 0;
         }
 
-        
-        
+
+
         /* Main Content styles */
         .content {
             margin-left: 240px;
@@ -67,6 +68,7 @@ $date_today = date("m/d/Y");
             border-radius: 10px;
             transition: background-color 0.3s ease;
         }
+
         .card:hover {
             transform: scale(1.05);
         }
@@ -93,56 +95,82 @@ $date_today = date("m/d/Y");
             color: #ecf0f1;
         }
 
-        .card-blue { background-color: #007bff; }
-        .card-green { background-color: #28a745; }
-        .card-orange { background-color: #fd7e14; }
-        .card-red { background-color: #dc3545; }
-        .card-light-blue { background-color: #17a2b8; }
-        .card-light-green { background-color: #6c757d; }
+        .card-blue {
+            background-color: #007bff;
+        }
+
+        .card-green {
+            background-color: #28a745;
+        }
+
+        .card-orange {
+            background-color: #fd7e14;
+        }
+
+        .card-red {
+            background-color: #dc3545;
+        }
+
+        .card-light-blue {
+            background-color: #17a2b8;
+        }
+
+        .card-light-green {
+            background-color: #6c757d;
+        }
     </style>
 </head>
+
 <body>
 
 
-<?php include 'sidebar.php'; ?>
+    <?php include 'sidebar.php'; ?>
 
     <!-- Main Content -->
     <div class="content">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2>Dashboard</h2>
-            
+
         </div>
         <div class="row">
             <div class="col-md-3">
-                <div class="card card-blue">
-                    <h3><?php echo $books_count; ?></h3>
-                    <p>Books</p>
-                    <a href="#" class="text-white">More info</a>
-                </div>
+                <a href="books.php" class="card-link">
+                    <div class="card card-blue">
+                        <h3><?php echo $books_count; ?></h3>
+                        <p>Books</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="members.php" class="card-link">
+                    <div class="card card-green">
+                        <h3><?php echo $members_count; ?></h3>
+                        <p>Members</p>
+
+                    </div>
+                </a>
             </div>
             <div class="col-md-3">
-                <div class="card card-green">
-                    <h3><?php echo $members_count; ?></h3>
-                    <p>Members</p>
-                    <a href="#" class="text-white">More info</a>
-                </div>
+                <a href="issued.php" class="card-link">
+                    <div class="card card-orange">
+                        <h3><?php echo $issued_count;; ?></h3>
+                        <p>Issued</p>
+
+                    </div>
+                </a>
             </div>
             <div class="col-md-3">
-                <div class="card card-orange">
-                    <h3><?php echo $issued_count;; ?></h3>
-                    <p>Issued</p>
-                    <a href="#" class="text-white">More info</a>
-                </div>
+                <a href="magazines.php" class="card-link">
+                    <div class="card card-red">
+                        <h3><?php echo $magazines_count; ?></h3>
+                        <p>Magazines</p>
+                       
+                    </div>
+                </a>
             </div>
-            <div class="col-md-3">
-                <div class="card card-red">
-                    <h3><?php echo $magazines_count; ?></h3>
-                    <p>Magazines</p>
-                    <a href="#" class="text-white">More info</a>
-                </div>
-            </div>
-            
-            
+
+
             <div class="col-md-3 mt-4">
                 <div class="card card-red">
                     <h3>Returned</h3>
@@ -167,6 +195,7 @@ $date_today = date("m/d/Y");
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
+
 </html>
 
 <?php

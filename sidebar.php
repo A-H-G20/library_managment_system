@@ -54,10 +54,11 @@
     </div>
     <div class="sidebar-links">
         <a href="dashboard.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-        <a href="members.php"><i class="fas fa-users"></i> Members</a>
         <a href="books.php" class="active"><i class="fas fa-book"></i> Books</a>
         <a href="magazines.php"><i class="fas fa-newspaper"></i> Magazines</a>
         <a href="issued.php"><i class="fas fa-book-reader"></i> Issued</a>
+        <a href="members.php"><i class="fas fa-users"></i> Members</a>
+        <a href="admin.php"><i class="fas fa-users"></i> Admin</a>
         <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
 </div>
