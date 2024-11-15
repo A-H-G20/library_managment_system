@@ -177,10 +177,12 @@ $date_today = date("m/d/Y");
 
 
             <div class="col-md-3 mt-4">
-                <div class="card card-blue">
-                    <p>Returned</p>
-                    <h3><?php echo $returned_count; ?></h3>
-                </div>
+                <a href="issued.php" class="card-link">
+                    <div class="card card-blue">
+                        <p>Returned</p>
+                        <h3><?php echo $returned_count; ?></h3>
+                    </div>
+                </a>
             </div>
             <div class="col-md-3 mt-4">
                 <a href="admin.php" class="card-link">
@@ -193,10 +195,12 @@ $date_today = date("m/d/Y");
                 </a>
             </div>
             <div class="col-md-3 mt-4">
-                <div class="card card-orange">
-                    <p>Not Returned</p>
-                    <h3><?php echo $not_returned_count; ?></h3>
-                </div>
+                <a href="issued.php" class="card-link">
+                    <div class="card card-orange">
+                        <p>Not Returned</p>
+                        <h3><?php echo $not_returned_count; ?></h3>
+                    </div>
+                </a>
             </div>
             <div class="col-md-3 mt-4">
                 <div class="card card-red">
