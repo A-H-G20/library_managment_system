@@ -6,12 +6,14 @@ if (!isset($_SESSION['user_id'])) {
     // If not logged in, redirect to login page
     header("Location: login.php");
     exit;
-} ?>
-<?php
+}
+
 include 'config.php';
 
+// Fetch members
 $result = $conn->query("SELECT * FROM members");
 
+// Handle member addition
 if (isset($_POST['add_member'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -20,6 +22,21 @@ if (isset($_POST['add_member'])) {
 
     $conn->query("INSERT INTO members (name, email, phone, address) VALUES ('$name', '$email', '$phone', '$address')");
     header("Location: members.php");
+    exit;
+}
+
+// Handle member deletion
+if (isset($_POST['delete_member'])) {
+    $member_id = $_POST['member_id'];
+
+    // Use prepared statements to prevent SQL injection
+    $stmt = $conn->prepare("DELETE FROM members WHERE id = ?");
+    $stmt->bind_param("i", $member_id);
+    $stmt->execute();
+    $stmt->close();
+
+    header("Location: members.php");
+    exit;
 }
 ?>
 
@@ -46,6 +63,7 @@ if (isset($_POST['add_member'])) {
                     <th>Phone</th>
                     <th>Address</th>
                     <th>Join Date</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -57,6 +75,12 @@ if (isset($_POST['add_member'])) {
                         <td><?php echo $row['phone']; ?></td>
                         <td><?php echo $row['address']; ?></td>
                         <td><?php echo $row['join_date']; ?></td>
+                        <td>
+                            <form action="members.php" method="post" style="display: inline;">
+                                <input type="hidden" name="member_id" value="<?php echo $row['id']; ?>">
+                                <button type="submit" name="delete_member">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
@@ -74,6 +98,7 @@ if (isset($_POST['add_member'])) {
 </body>
 
 </html>
+
 <style>
     /* General Styles */
     body {
@@ -82,7 +107,6 @@ if (isset($_POST['add_member'])) {
         margin: 0;
         padding: 0;
     }
-
 
     /* Main Content */
     .content {
@@ -160,16 +184,5 @@ if (isset($_POST['add_member'])) {
         background-color: #0056b3;
     }
 
-    /* Error Message Styling */
-    .alert {
-        padding: 15px;
-        margin-top: 20px;
-        background-color: #f44336;
-        color: white;
-        border-radius: 4px;
-    }
-
-    .alert.success {
-        background-color: #4CAF50;
-    }
+ 
 </style>
